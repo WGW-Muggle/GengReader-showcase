@@ -1,0 +1,63 @@
+{
+  "application": "GengReader",
+  "sourceRevision": "e1c0175a41ac224805fe78357d9638c6602d230a",
+  "templateBaseline": "13777ea",
+  "modules": [
+    {
+      "source": "src/shared/reader/types.ts",
+      "published": "src/core/types.ts",
+      "change": "unchanged",
+      "sha256": "841337ddbaf411622b9344802ee7934ec8fcc56d9cbfd162eec245fff615fc08"
+    },
+    {
+      "source": "src/shared/reader/ai-types.ts",
+      "published": "src/core/ai-types.ts",
+      "change": "unchanged",
+      "sha256": "b32bcf3b553bb5cc35c0d8f0842f1b88289ada8042b581719dcbc319b1377687"
+    },
+    {
+      "source": "src/shared/reader/ai-evidence.ts",
+      "published": "src/core/ai-evidence.ts",
+      "change": "unchanged",
+      "sha256": "3ccc8263195d283f0ef7c1b387c95710e35dad273c909ddb22ac0b1ba32def90"
+    },
+    {
+      "source": "src/shared/reader/ai-chat-stream.ts",
+      "published": "src/core/ai-chat-stream.ts",
+      "change": "unchanged",
+      "sha256": "7340e7430f9ee5082d341c324dc2919a3683585efbe0e0318cd8d0ccf3cd41b6"
+    },
+    {
+      "source": "src/shared/reader/character-layout.ts",
+      "published": "src/core/character-layout.ts",
+      "change": "unchanged",
+      "sha256": "25235d711404cc162c0b7837a67439e5d3df3c5c66de15bbe51aac90dc029888"
+    },
+    {
+      "source": "src/shared/reader/character-salience.ts",
+      "published": "src/core/character-salience.ts",
+      "change": "unchanged",
+      "sha256": "6d0c4269da5d8741e996f7ce9af2cd98570600197c4e809fc0e698fd82aded0e"
+    },
+    {
+      "source": "src/shared/reader/character-identity.ts",
+      "published": "src/core/character-identity.ts",
+      "change": "unchanged",
+      "sha256": "3086b3b16ebca1564394adc7621c5fbbef700f37f38e70f447eb9e73518bd97b"
+    },
+    {
+      "source": "src/shared/reader/portrait-material.ts",
+      "published": "src/core/portrait-material.ts",
+      "change": "unchanged",
+      "sha256": "a088f9ca7dfc22bcd6d86b84ac93da78ea61f4e0b630d05435f64f256c98ca2c"
+    },
+    {
+      "source": "src/shared/reader/scope.ts",
+      "published": "src/core/scope-range.ts",
+      "change": "Extract filterBlocksToRange unchanged; keep only ReaderBlock type import.",
+      "sourceSha256": "397a3e7f0864819f9acd550d2b9430dade0e5a4b89031d16895094c2649bae2e",
+      "sha256": "fe03dcca57c01f5d91eec0f274252336352725981a92f23b6a0a7c1f60c85621"
+    }
+  ],
+  "hashEncoding": "UTF-8 with LF line endings"
+}

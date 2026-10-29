@@ -19,6 +19,8 @@
   &nbsp; · &nbsp;
   <a href="https://gengreader.com/#characters">先看看怎么读</a>
   &nbsp; · &nbsp;
+  <a href="./src/core">核心代码</a>
+  &nbsp; · &nbsp;
   <a href="#常见问题">常见问题</a>
 </p>
 
@@ -70,6 +72,27 @@ GengReader 是一个 AI 辅助的深度阅读工作台。带来一本 EPUB 或 P
 | 把零散想法串起来 | 高亮、笔记、思维导图，以及 Markdown / SVG 导出 |
 | 按自己的节奏读   | 默认按已读范围提供内容，主动选择整章或整书分析 |
 
+## 核心代码
+
+想了解 GengReader 是怎样实现的，可以直接查看 [原创核心模块](./src/core/) 和 [代码导读](./docs/CODE_GUIDE.md)。这里保留应用实际使用的算法逻辑，并提供可独立运行的演示和测试。
+
+| 实现主题           | 代码入口                                                                                              |
+| ------------------ | ----------------------------------------------------------------------------------------------------- |
+| 已读范围与原文引用 | [范围裁切](./src/core/scope-range.ts) · [证据检索与引用校验](./src/core/ai-evidence.ts)               |
+| 人物理解           | [身份与同名判断](./src/core/character-identity.ts) · [主要人物排序](./src/core/character-salience.ts) |
+| 图形与画像资料     | [关系图布局](./src/core/character-layout.ts) · [画像资料整理](./src/core/portrait-material.ts)        |
+| 流式讨论           | [SSE 事件传输](./src/core/ai-chat-stream.ts)                                                          |
+
+安装 Node.js 22.14+ 和 pnpm 10 后，在仓库目录运行：
+
+```sh
+pnpm install --frozen-lockfile
+pnpm demo
+pnpm test
+```
+
+演示不需要密钥，不调用收费模型。这里是核心实现选集；完整网站体验请前往 [gengreader.com](https://gengreader.com)。
+
 ## 常见问题
 
 <details>
@@ -103,7 +126,7 @@ GengReader 是一个 AI 辅助的深度阅读工作台。带来一本 EPUB 或 P
 <details>
 <summary><strong>这里能直接体验吗？</strong></summary>
 
-这个 GitHub 仓库展示项目介绍与界面图片。请前往 [GengReader 官网](https://gengreader.com) 使用交互示例和阅读功能。官网示例使用原创《河岸家书》，演示笔记保存在当前浏览器；账户内书籍与阅读记录按用户私有保存。
+这个 GitHub 仓库提供产品介绍、界面图片和原创核心代码。源码演示的运行方式见 [代码导读](./docs/CODE_GUIDE.md)；完整的交互示例和阅读功能请前往 [GengReader 官网](https://gengreader.com)。官网示例使用原创《河岸家书》，演示笔记保存在当前浏览器；账户内书籍与阅读记录按用户私有保存。
 
 AI、OCR 和画像等功能的可用范围取决于线上服务配置，实际使用以网站提示为准。
 

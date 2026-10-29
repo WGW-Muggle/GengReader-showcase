@@ -1,0 +1,21 @@
+{
+  "name": "gengreader-core-examples",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "GengReader original core algorithms and reading-flow examples",
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "packageManager": "pnpm@10.17.1",
+  "scripts": {
+    "demo": "tsx examples/reading-flow.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.43",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  }
+}
